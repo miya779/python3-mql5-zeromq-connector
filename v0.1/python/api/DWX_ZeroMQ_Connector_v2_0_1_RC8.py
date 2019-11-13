@@ -423,8 +423,8 @@ class DWX_ZeroMQ_Connector():
          For compArray[0] == DATA, format is: 
              DATA|SYMBOL|TIMEFRAME|START_DATETIME|END_DATETIME
          
-         // ORDER TYPES: 
-         // https://docs.mql4.com/constants/tradingconstants/orderproperties
+         // ORDER TYPES (ENUM_ORDER_TYPE):
+         // https://www.mql5.com/pt/docs/constants/tradingconstants/orderproperties#enum_order_type
          
          // OP_BUY = 0
          // OP_SELL = 1
@@ -432,6 +432,9 @@ class DWX_ZeroMQ_Connector():
          // OP_SELLLIMIT = 3
          // OP_BUYSTOP = 4
          // OP_SELLSTOP = 5
+         // OP_BUYSTOPLIMIT = 6
+         // OP_SELLSTOPLIMIT = 7
+         // OP_CLOSEBY = 8
          
          compArray[3] = Symbol (e.g. EURUSD, etc.)
          compArray[4] = Open/Close Price (ignored if ACTION = MODIFY)
